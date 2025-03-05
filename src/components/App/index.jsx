@@ -1,8 +1,8 @@
-import { useState } from "react";
+import "./styles.css";
 import NavButton from "../NavButton";
 import PopularRepo from "../PopularRepo";
 import Battle from "../Battle";
-import "./styles.css";
+import { useState } from "react";
 
 export default function App() {
   const [showBattle, setShowBattle] = useState(false);
@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <div className="container">
-      <div className="flex space-between">
+      <div className="navbar">
         <NavButton
           isActive={!showBattle}
           text="popularRepo"
@@ -25,7 +25,9 @@ export default function App() {
           onClick={toggleBattleView}
         />
       </div>
-      {showBattle ? <Battle /> : <PopularRepo />}
+      <div className="ground">
+        {showBattle ? <Battle /> : <PopularRepo />}
+      </div>
     </div>
   );
 }

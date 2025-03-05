@@ -1,0 +1,45 @@
+.card-container {
+  float: left;
+  width: 29%;
+  height: 100%;
+  margin: 1.5%;
+  border: 3px solid rgb(11, 7, 7);
+  border-radius: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(21, 19, 19, 0.712);
+  padding: 10px;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 70%;
+  overflow: hidden;
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    width: 45%;
+  }
+}
+
+@media(max-width:760px) {
+  .card {
+    width: 90%;
+  }
+}
