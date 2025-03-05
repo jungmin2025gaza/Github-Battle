@@ -2,8 +2,8 @@ import "./styles.css";
 import LANGUAGES from "../../constants/languages.js";
 import Loader from "../Loader";
 import Card from "../Card";
-import { useState, useEffect } from "react";
 import { getPopularRepos } from "../../utils/api.js";
+import { useState, useEffect } from "react";
 
 export default function PopularRepo() {
   const [popRepos, setPopRepos] = useState([]);
@@ -47,8 +47,7 @@ export default function PopularRepo() {
             <Card repo={popRepo} />
           ))}
         </div>
-      )
-      }
+      )}
     </div >
   )
 }
